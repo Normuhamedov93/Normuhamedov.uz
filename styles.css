@@ -1,14 +1,143 @@
+/* O'zgaruvchilar (Variables) */
+:root {
+  --primary-color: #363795;
+  --primary-gradient-start: #005c97;
+  --light-bg: #f8f9fa;
+  --dark-text: #212529;
+  --white-color: #fff;
+}
+
+/* Umumiy stillar */
+body {
+  background-color: var(--light-bg); /* Yengil kulrang fon */
+  color: var(--dark-text); /* Asosiy matn rangi */
+}
+
 /* Стили для index.html */
 .rounded-img {
-  width: 60%;
+  max-width: 300px; /* Maksimal kenglikni cheklaymiz */
+  width: 100%; /* Konteynerga moslashish uchun */
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   padding: 0.6em;
   margin-bottom: 1em;
 }
+
+.hero-section {
+  min-height: 70vh; /* Bo'lim balandligini sozlash */
+}
+
+/* Mobil qurilmalar uchun matnni markazlashtirish */
+@media (max-width: 767.98px) {
+  .hero-text {
+    text-align: center;
+  }
+}
+
+/* Ko'nikmalar bo'limi uchun stillar */
+.skills-section {
+  background-color: #ffffff;
+  border-radius: 1em;
+  margin-top: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.skill-item {
+  /* 3D effekt uchun perspektiva qo'shamiz */
+  perspective: 500px;
+}
+
+.skill-item i {
+  /* 3D effekt uchun soya */
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(0, 0, 0, 0.1);
+  /* Animatsiyani qo'shish */
+  animation: rotate-icon 10s linear infinite;
+  /* Animatsiya to'xtab qolmasligi uchun */
+  transform-style: preserve-3d;
+  display: inline-block; /* Transformatsiyalar to'g'ri ishlashi uchun */
+}
+
+/* Ikonkalarni aylantirish uchun animatsiya */
+@keyframes rotate-icon {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Harakatni kamaytirishni afzal ko'rgan foydalanuvchilar uchun animatsiyani o'chirish */
+@media (prefers-reduced-motion: reduce) {
+  .skill-item i {
+    animation: none;
+  }
+}
+
+/* Ko'nikmalar ikonkalari uchun maxsus ranglar */
+.text-html {
+  color: #e44d26;
+}
+.text-css {
+  color: #264de4;
+}
+.text-js {
+  color: #f0db4f;
+}
+.text-bootstrap {
+  color: #7952b3;
+}
+
+/* Bosh sahifadagi tugmalar uchun maxsus stillar */
+.btn-custom-primary {
+  color: var(--white-color);
+  border: none;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-gradient-start) 0%,
+    var(--primary-color) 51%,
+    var(--primary-gradient-start) 100%
+  );
+  transition: 0.5s;
+}
+
+.btn-custom-primary:hover {
+  background-position: right center; /* Gradient yo'nalishini o'zgartirish */
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.btn-custom-secondary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-custom-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
 /* styles.css faylingizga qo'shing */
 .social-icon {
   font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.social-icon.bi-youtube {
+  color: #ff0000;
+}
+
+.social-icon.bi-telegram {
+  color: #0088cc;
+}
+.social-icon.bi-instagram {
+  color: #e4405f;
 }
 main h1.fw-light {
   font-family: "Roboto Slab", serif;
@@ -20,6 +149,7 @@ main h1.fw-light {
   border-radius: 1em;
   text-align: center;
   padding: 1em;
+  height: 100%; /* Kartochkalar bir xil balandlikda bo'lishi uchun */
 }
 .card:hover {
   transform: scale(1.03);

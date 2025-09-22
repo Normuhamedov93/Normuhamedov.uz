@@ -10,11 +10,6 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -74,24 +69,70 @@
         </div>
       </div>
     </nav>
-    <main class="container text-center my-5">
-      <div class="row">
-        <div class="col-lg-8 mx-auto portfolio-card">
+    <main class="container my-5">
+      <div class="row align-items-center hero-section">
+        <div class="col-md-4 text-center portfolio-card">
           <img
-            class="rounded-img"
+            class="rounded-img img-fluid"
             src="photo_2025-09-18_22-35-49.jpg"
             alt="Bohodir Normuhamedovichning surati"
           />
+        </div>
+        <div class="col-md-8 portfolio-card hero-text">
           <h1 class="fw-light">Bohodir Normuhamedovich</h1>
           <p class="lead text-muted">
             Assalomu alaykum! Men texnologiyalar, dasturlash va raqamli dunyo
             bilan qiziqaman. O'z bilim va tajribalarimni "progametricks" nomli
-            YouTube kanalimda bo'lishaman. U yerda siz dasturlash sirlari va
-            texnologik tryuklar haqida foydali ma'lumotlarni topishingiz mumkin.
-            Ijtimoiy tarmoqlarda meni kuzatib boring!
+            YouTube kanalimda bo'lishaman.
           </p>
+          <p class="text-muted">
+            U yerda siz dasturlash sirlari va texnologik tryuklar haqida foydali
+            ma'lumotlarni topishingiz mumkin. Ijtimoiy tarmoqlarda meni kuzatib
+            boring!
+          </p>
+          <div class="mt-4">
+            <a href="Portfolio.html" class="btn btn-custom-primary btn-lg me-2"
+              >Ishlarimni ko'rish</a
+            >
+            <a href="contact.html" class="btn btn-custom-secondary btn-lg"
+              >Men bilan bog'lanish</a
+            >
+          </div>
         </div>
       </div>
+
+      <!-- ===== KO'NIKMALARIM BO'LIMI ===== -->
+      <section class="skills-section text-center py-5">
+        <div class="container">
+          <h2 class="mb-5">Mening ko'nikmalarim</h2>
+          <div class="row">
+            <div class="col-6 col-md-3 mb-4 portfolio-card">
+              <div class="skill-item">
+                <i class="bi bi-filetype-html display-1 text-html"></i>
+                <h4 class="mt-3">HTML5</h4>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4 portfolio-card">
+              <div class="skill-item">
+                <i class="bi bi-filetype-css display-1 text-css"></i>
+                <h4 class="mt-3">CSS3</h4>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4 portfolio-card">
+              <div class="skill-item">
+                <i class="bi bi-filetype-js display-1 text-js"></i>
+                <h4 class="mt-3">JavaScript</h4>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4 portfolio-card">
+              <div class="skill-item">
+                <i class="bi bi-bootstrap-fill display-1 text-bootstrap"></i>
+                <h4 class="mt-3">Bootstrap</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="container py-4">
       <div
@@ -103,27 +144,30 @@
         <ul class="list-unstyled d-flex">
           <li class="ms-3">
             <a
-              class="text-body-secondary"
               href="https://youtube.com/@progametricks?si=26NL5ycKfVpE7ypO"
               target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening YouTube kanalim"
             >
               <i class="bi bi-youtube social-icon"></i>
             </a>
           </li>
           <li class="ms-3">
             <a
-              class="text-body-secondary"
               href="https://t.me/Bohodirbek93"
               target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening Telegram sahifam"
             >
               <i class="bi bi-telegram social-icon"></i>
             </a>
           </li>
           <li class="ms-3">
             <a
-              class="text-body-secondary"
               href="https://www.instagram.com/babaev.b.n?igsh=MTczcjhjMXI0YjlzNg%3D%3D&utm_source=qr"
               target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening Instagram sahifam"
             >
               <i class="bi bi-instagram social-icon"></i>
             </a>
@@ -136,6 +180,11 @@
       <i class="bi bi-arrow-up-short"></i>
     </button>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js" defer></script>
   </body>
 </html>
