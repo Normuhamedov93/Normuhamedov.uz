@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // --- Throttling funksiyasi ---
+  // Bu funksiya boshqa bir funksiyaning belgilangan vaqt oralig'ida
+  // faqat bir marta ishga tushishini ta'minlaydi.
+  const throttle = (func, limit) => {
+    let inThrottle;
+    return function () {
+      const args = arguments;
+      const context = this;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => (inThrottle = false), limit);
+      }
+    };
+  };
+
   // --- Preloader logikasi ---
   window.addEventListener("load", () => {
     const preloader = document.querySelector(".preloader");
@@ -21,7 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollTopBtn.style.display = "none";
       }
     };
-    window.addEventListener("scroll", scrollHandler);
+
+    // Scroll hodisasini optimallashtirish: scrollHandler funksiyasi
+    // har 200ms da ko'pi bilan bir marta ishlaydi.
+    window.addEventListener("scroll", throttle(scrollHandler, 200));
+
     scrollTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
