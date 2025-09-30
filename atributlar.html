@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HTML atributlari haqida to'liq qo'llanma."
+    />
+    <title>Normuhamedov Qo'lanmalar - Atributlar</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Qo'llanma sahifalari uchun maxsus uslublar -->
+    <link rel="stylesheet" href="guide-styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="BN.png"
+            alt="logo"
+            width="40"
+            class="d-inline-block align-text-top me-2"
+          />
+          Normuhamedov
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Bosh sahifa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Portfolio.html">Ishlarim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Aloqa</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <header>
+        <h1>Barcha HTML atributlar jamlanmasi</h1>
+        <p>
+          Bu yerda siz HTMLning barcha asosiy atributlari va ularning vazifalari
+          haqida ma'lumot topishingiz mumkin.
+        </p>
+      </header>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Atributlarni qidirish..."
+        />
+      </div>
+
+      <div
+        id="noResults"
+        style="display: none; text-align: center; padding: 20px; color: #7f8c8d"
+      >
+        <p>Hech narsa topilmadi.</p>
+      </div>
+
+      <h2>1. Global Atributlar (Barcha teglarga xos)</h2>
+      <ul>
+        <li>
+          <code>class</code> - Element uchun bir yoki bir nechta sinf nomlarini
+          belgilaydi (CSS orqali uslub berish uchun).
+        </li>
+        <li>
+          <code>id</code> - Element uchun unikal (takrorlanmas) identifikator
+          belgilaydi.
+        </li>
+        <li>
+          <code>style</code> - Element uchun inline (ichki) CSS uslublarini
+          belgilaydi.
+        </li>
+        <li>
+          <code>title</code> - Element ustiga sichqoncha olib borilganda
+          qo'shimcha ma'lumot ko'rsatadi.
+        </li>
+        <li>
+          <code>lang</code> - Element tarkibidagi matn tilini belgilaydi
+          (masalan, "en", "uz").
+        </li>
+        <li>
+          <code>hidden</code> - Elementni brauzerda ko'rinmaydigan qilib
+          qo'yadi.
+        </li>
+        <li>
+          <code>tabindex</code> - Elementning klaviatura orqali fokuslanish
+          tartibini belgilaydi.
+        </li>
+        <li>
+          <code>data-*</code> - Sahifaga maxsus, shaxsiy ma'lumotlarni saqlash
+          uchun ishlatiladi.
+        </li>
+      </ul>
+
+      <h2>2. Havola va Media Atributlari</h2>
+      <ul>
+        <li>
+          <code>href</code> (<code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>
+          uchun) - Havola manzilini (URL) belgilaydi.
+        </li>
+        <li>
+          <code>src</code> (<code>&lt;img&gt;</code>,
+          <code>&lt;script&gt;</code>, <code>&lt;iframe&gt;</code> uchun) -
+          Manba faylning yo'lini (URL) belgilaydi.
+        </li>
+        <li>
+          <code>alt</code> (<code>&lt;img&gt;</code> uchun) - Rasm yuklanmaganda
+          yoki ko'zi ojiz foydalanuvchilar uchun uning o'rniga ko'rsatiladigan
+          alternativ matn.
+        </li>
+        <li>
+          <code>width</code>, <code>height</code> (<code>&lt;img&gt;</code>,
+          <code>&lt;video&gt;</code> uchun) - Elementning kengligi va
+          balandligini belgilaydi.
+        </li>
+        <li>
+          <code>target</code> (<code>&lt;a&gt;</code> uchun) - Havola qayerda
+          ochilishini belgilaydi (masalan, <code>_blank</code> yangi oynada
+          ochadi).
+        </li>
+        <li>
+          <code>controls</code> (<code>&lt;audio&gt;</code>,
+          <code>&lt;video&gt;</code> uchun) - Media uchun boshqaruv panellarini
+          (play, pause, ovoz) ko'rsatadi.
+        </li>
+        <li>
+          <code>autoplay</code> (<code>&lt;audio&gt;</code>,
+          <code>&lt;video&gt;</code> uchun) - Media yuklanishi bilan avtomatik
+          ravishda ijro etilishini ta'minlaydi.
+        </li>
+      </ul>
+
+      <h2>3. Forma Atributlari</h2>
+      <ul>
+        <li>
+          <code>action</code> (<code>&lt;form&gt;</code> uchun) - Forma
+          ma'lumotlari yuboriladigan manzilni (URL) belgilaydi.
+        </li>
+        <li>
+          <code>method</code> (<code>&lt;form&gt;</code> uchun) - Ma'lumotlarni
+          yuborish usulini belgilaydi (<code>GET</code> yoki <code>POST</code>).
+        </li>
+        <li>
+          <code>type</code> (<code>&lt;input&gt;</code> uchun) - Kiritish
+          maydonining turini belgilaydi (masalan, "text", "password", "submit").
+        </li>
+        <li>
+          <code>name</code> - Element nomini belgilaydi (serverga ma'lumot
+          yuborish uchun kerak).
+        </li>
+        <li>
+          <code>value</code> - Kiritish maydonining dastlabki qiymatini
+          belgilaydi.
+        </li>
+        <li>
+          <code>placeholder</code> - Kiritish maydonida ko'rsatiladigan maslahat
+          matni.
+        </li>
+        <li>
+          <code>required</code> - Maydonni to'ldirish majburiy ekanligini
+          bildiradi.
+        </li>
+        <li>
+          <code>disabled</code> - Elementni o'chirib qo'yadi, foydalanib
+          bo'lmaydi.
+        </li>
+        <li>
+          <code>readonly</code> - Maydon qiymatini faqat o'qish uchun qoldiradi
+          (o'zgartirib bo'lmaydi).
+        </li>
+        <li>
+          <code>maxlength</code> - Kiritish maydoniga kiritilishi mumkin bo'lgan
+          belgilarning maksimal sonini belgilaydi.
+        </li>
+      </ul>
+    </main>
+
+    <footer class="container py-4">
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+      >
+        <p>
+          &copy; 2024 Bohodir Normuhamedovich. Barcha huquqlar himoyalangan.
+        </p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a
+              href="https://youtube.com/@progametricks?si=26NL5ycKfVpE7ypO"
+              target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening YouTube kanalim"
+            >
+              <i class="bi bi-youtube social-icon"></i>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a
+              href="https://t.me/Bohodirbek93"
+              target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening Telegram sahifam"
+            >
+              <i class="bi bi-telegram social-icon"></i>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a
+              href="https://www.instagram.com/babaev.b.n?igsh=MTczcjhjMXI0YjlzNg%3D%3D&utm_source=qr"
+              target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening Instagram sahifam"
+            >
+              <i class="bi bi-instagram social-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Yuqoriga">
+      <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const listItems = document.querySelectorAll(".container li");
+      const noResultsDiv = document.getElementById("noResults");
+
+      searchInput.addEventListener("keyup", (event) => {
+        const searchTerm = event.target.value.toLowerCase();
+        let found = false;
+
+        listItems.forEach((item) => {
+          const itemText = item.textContent.toLowerCase();
+          if (itemText.includes(searchTerm)) {
+            item.style.display = "";
+            found = true;
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        // Agar hech narsa topilmasa, xabar ko'rsatish
+        if (found) {
+          noResultsDiv.style.display = "none";
+        } else {
+          noResultsDiv.style.display = "block";
+        }
+      });
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

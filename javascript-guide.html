@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JavaScript dasturlash tili bo'yicha asosiy tushunchalar va qo'llanma."
+    />
+    <title>Normuhamedov Qo'lanmalar - JavaScript</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Qo'llanma sahifalari uchun maxsus uslublar -->
+    <link rel="stylesheet" href="guide-styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="BN.png"
+            alt="logo"
+            width="40"
+            class="d-inline-block align-text-top me-2"
+          />
+          Normuhamedov
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Bosh sahifa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Portfolio.html">Ishlarim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Aloqa</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <header>
+        <h1>JavaScript bo'yicha qo'llanma</h1>
+        <p>
+          Bu yerda siz JavaScriptning eng ko'p qo'llaniladigan tushunchalari
+          haqida ma'lumot topasiz.
+        </p>
+      </header>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Mavzuni qidirish..." />
+      </div>
+
+      <div
+        id="noResults"
+        style="display: none; text-align: center; padding: 20px; color: #7f8c8d"
+      >
+        <p>Hech narsa topilmadi.</p>
+      </div>
+
+      <h2>1. O'zgaruvchilar va Ma'lumot Turlari</h2>
+      <ul>
+        <li>
+          <code>let</code> - O'zgaruvchan qiymatga ega bo'lgan blok-sohasidagi
+          o'zgaruvchi e'lon qilish.
+        </li>
+        <li>
+          <code>const</code> - O'zgarmas qiymatga ega bo'lgan (konstanta)
+          o'zgaruvchi e'lon qilish.
+        </li>
+        <li>
+          <strong>Ma'lumot turlari:</strong> <code>String</code> (matn),
+          <code>Number</code> (son), <code>Boolean</code> (true/false),
+          <code>Object</code> (obyekt), <code>Array</code> (massiv),
+          <code>null</code>, <code>undefined</code>.
+        </li>
+      </ul>
+
+      <h2>2. Operatorlar</h2>
+      <ul>
+        <li>
+          <strong>Arifmetik:</strong> <code>+</code>, <code>-</code>,
+          <code>*</code>, <code>/</code>, <code>%</code> (qoldiq),
+          <code>**</code> (daraja).
+        </li>
+        <li>
+          <strong>Taqqoslash:</strong> <code>==</code> (teng),
+          <code>===</code> (qat'iy teng - qiymat va tur bo'yicha),
+          <code>!=</code>, <code>!==</code>, <code>&gt;</code>,
+          <code>&lt;</code>.
+        </li>
+        <li>
+          <strong>Mantiqiy:</strong> <code>&&</code> (VA),
+          <code>||</code> (YOKI), <code>!</code> (INKOR).
+        </li>
+      </ul>
+
+      <h2>3. Shartli Operatorlar va Sikllar</h2>
+      <ul>
+        <li><code>if...else</code> - Shartga qarab kod blokini bajarish.</li>
+        <li><code>switch</code> - Ko'p holatlardan birini tanlab bajarish.</li>
+        <li><code>for</code> - Belgilangan marta takrorlanuvchi sikl.</li>
+        <li><code>while</code> - Shart bajarilguncha takrorlanuvchi sikl.</li>
+        <li>
+          <code>.forEach()</code> - Massivning har bir elementi uchun funksiyani
+          ishga tushiradi.
+        </li>
+      </ul>
+
+      <h2>4. Funksiyalar</h2>
+      <ul>
+        <li>
+          <strong>Function Declaration:</strong>
+          <code>function nom(parametr) { ... }</code>
+        </li>
+        <li>
+          <strong>Arrow Function (Strelkali funksiya):</strong>
+          <code>const nom = (parametr) => { ... }</code> - Zamonaviy va qisqa
+          yozuv.
+        </li>
+      </ul>
+
+      <h2>5. DOM (Document Object Model) bilan ishlash</h2>
+      <ul>
+        <li>
+          <code>document.getElementById('id')</code> - Elementni ID orqali
+          topish.
+        </li>
+        <li>
+          <code>document.querySelector('.class')</code> - Elementni CSS
+          selektori orqali topish (birinchisini).
+        </li>
+        <li>
+          <code>document.querySelectorAll('.class')</code> - Barcha mos
+          elementlarni topish.
+        </li>
+        <li>
+          <code>.addEventListener('click', funksiya)</code> - Elementga hodisa
+          (masalan, bosish) qo'shish.
+        </li>
+        <li>
+          <code>.innerHTML</code>, <code>.textContent</code> - Elementning
+          ichidagi kontentni o'zgartirish.
+        </li>
+        <li>
+          <code>.style.property</code> - Elementning CSS uslubini o'zgartirish
+          (masalan, <code>.style.color = 'red'</code>).
+        </li>
+        <li>
+          <code>.classList.add('new-class')</code>,
+          <code>.classList.remove('class')</code> - CSS sinflarini qo'shish va
+          o'chirish.
+        </li>
+      </ul>
+
+      <h2>6. Asinxron JavaScript</h2>
+      <ul>
+        <li>
+          <code>setTimeout(funksiya, vaqt)</code> - Belgilangan vaqtdan so'ng
+          funksiyani bir marta bajaradi.
+        </li>
+        <li>
+          <code>Promise</code> - Asinxron operatsiyaning yakuniy natijasini
+          ifodalovchi obyekt. <code>.then()</code> va <code>.catch()</code>
+          bilan ishlanadi.
+        </li>
+        <li>
+          <code>async/await</code> - Promise'lar bilan ishlashni
+          osonlashtiruvchi sintaksis. Kodni sinxron ko'rinishda yozishga imkon
+          beradi.
+        </li>
+      </ul>
+    </main>
+
+    <footer class="container py-4">
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+      >
+        <p>
+          &copy; 2024 Bohodir Normuhamedovich. Barcha huquqlar himoyalangan.
+        </p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a
+              href="https://youtube.com/@progametricks?si=26NL5ycKfVpE7ypO"
+              target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening YouTube kanalim"
+            >
+              <i class="bi bi-youtube social-icon"></i>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a
+              href="https://t.me/Bohodirbek93"
+              target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening Telegram sahifam"
+            >
+              <i class="bi bi-telegram social-icon"></i>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a
+              href="https://www.instagram.com/babaev.b.n?igsh=MTczcjhjMXI0YjlzNg%3D%3D&utm_source=qr"
+              target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening Instagram sahifam"
+            >
+              <i class="bi bi-instagram social-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Yuqoriga">
+      <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const listItems = document.querySelectorAll("main li");
+      const noResultsDiv = document.getElementById("noResults");
+      const sections = document.querySelectorAll("main h2, main ul");
+
+      searchInput.addEventListener("keyup", (event) => {
+        const searchTerm = event.target.value.toLowerCase();
+        let found = false;
+
+        sections.forEach((el) => (el.style.display = ""));
+        listItems.forEach((item) => {
+          const itemText = item.textContent.toLowerCase();
+          if (itemText.includes(searchTerm)) {
+            item.style.display = "";
+            found = true;
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        document.querySelectorAll("main h2").forEach((h2) => {
+          const ul = h2.nextElementSibling;
+          if (ul && ul.tagName === "UL") {
+            const visibleItems = ul.querySelectorAll("li[style='']");
+            if (visibleItems.length === 0) {
+              h2.style.display = "none";
+              ul.style.display = "none";
+            } else {
+              h2.style.display = "";
+              ul.style.display = "";
+            }
+          }
+        });
+
+        noResultsDiv.style.display = found ? "none" : "block";
+      });
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

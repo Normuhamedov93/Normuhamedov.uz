@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HTML teglari va atributlari haqida to'liq qo'llanma."
+    />
+    <title>Normuhamedov Qo'lanmalar</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Qo'llanma sahifalari uchun maxsus uslublar -->
+    <link rel="stylesheet" href="guide-styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="BN.png"
+            alt="logo"
+            width="40"
+            class="d-inline-block align-text-top me-2"
+          />
+          Normuhamedov
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Bosh sahifa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Portfolio.html">Ishlarim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Aloqa</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <header>
+        <h1>Barcha HTML teglar va atributlar jamlanmasi</h1>
+        <p>
+          Bu yerda siz HTMLning barcha asosiy teglar va ularning atributlari
+          haqida ma'lumot topishingiz mumkin.
+        </p>
+      </header>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Teglarni qidirish..."
+        />
+      </div>
+
+      <div
+        id="noResults"
+        style="display: none; text-align: center; padding: 20px; color: #7f8c8d"
+      >
+        <p>Hech narsa topilmadi.</p>
+      </div>
+
+      <h2>1. Hujjatning asosiy tuzilmasi</h2>
+      <ul>
+        <li>
+          <code>&lt;!DOCTYPE html&gt;</code> - Hujjat turini HTML5 deb e'lon
+          qiladi.
+        </li>
+        <li><code>&lt;html&gt;</code> - HTML hujjatining ildiz elementi.</li>
+        <li>
+          <code>&lt;head&gt;</code> - Hujjat uchun metama'lumotlarni (sarlavha,
+          uslublar, skriptlar) saqlaydi.
+        </li>
+        <li>
+          <code>&lt;body&gt;</code> - Hujjatning brauzerda ko'rinadigan barcha
+          mazmunini o'z ichiga oladi.
+        </li>
+      </ul>
+
+      <h2>2. Hujjat metama'lumotlari (Head ichida)</h2>
+      <ul>
+        <li>
+          <code>&lt;title&gt;</code> - Brauzer yorlig'ida ko'rinadigan hujjat
+          sarlavhasi.
+        </li>
+        <li>
+          <code>&lt;style&gt;</code>, <code>&lt;link&gt;</code> - CSS
+          uslublarini bog'lash yoki aniqlash uchun.
+        </li>
+        <li>
+          <code>&lt;script&gt;</code> - JavaScript kodini sahifaga qo'shish
+          uchun ishlatiladi.
+        </li>
+        <li>
+          <code>&lt;meta&gt;</code> - Hujjat metama'lumotlarini (kodirovka,
+          tavsif, kalit so'zlar) belgilaydi.
+        </li>
+        <li>
+          <code>&lt;base&gt;</code> - Sahifadagi barcha nisbiy havolalar uchun
+          asosiy URL manzilini belgilaydi.
+        </li>
+        <li>
+          <code>&lt;noscript&gt;</code> - Brauzerda skriptlar o'chirilgan bo'lsa
+          ko'rsatiladigan kontent.
+        </li>
+      </ul>
+
+      <h2>3. Sahifa bo'limlari va semantika</h2>
+      <ul>
+        <li>
+          <code>&lt;h1&gt;</code> dan <code>&lt;h6&gt;</code> gacha -
+          Sarlavhalar.
+        </li>
+        <li>
+          <code>&lt;header&gt;</code> - Sahifa yoki bo'limning sarlavha qismi.
+        </li>
+        <li>
+          <code>&lt;nav&gt;</code> - Navigatsiya havolalari uchun konteyner.
+        </li>
+        <li><code>&lt;main&gt;</code> - Hujjatning asosiy, unikal mazmuni.</li>
+        <li>
+          <code>&lt;section&gt;</code> - Hujjatdagi mantiqiy guruhlangan bo'lim.
+        </li>
+        <li>
+          <code>&lt;article&gt;</code> - Mustaqil, alohida tarqatilishi mumkin
+          bo'lgan kontent (maqola, post).
+        </li>
+        <li>
+          <code>&lt;aside&gt;</code> - Asosiy kontentga bilvosita bog'liq
+          bo'lgan qo'shimcha ma'lumot (yon panel).
+        </li>
+        <li>
+          <code>&lt;footer&gt;</code> - Sahifa yoki bo'limning quyi qismi
+          (muallif, aloqa).
+        </li>
+        <li>
+          <code>&lt;address&gt;</code> - Aloqa ma'lumotlarini belgilash uchun.
+        </li>
+        <li><code>&lt;div&gt;</code> - Umumiy maqsadli blok-konteyner.</li>
+        <li>
+          <code>&lt;span&gt;</code> - Umumiy maqsadli matn-ichidagi konteyner.
+        </li>
+      </ul>
+
+      <h2>4. Matn formatlash</h2>
+      <ul>
+        <li><code>&lt;p&gt;</code> - Matn paragrafini belgilaydi.</li>
+        <li>
+          <code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code> - Matnni qalin
+          qilish (<code>&lt;strong&gt;</code> muhimlikni bildiradi).
+        </li>
+        <li>
+          <code>&lt;i&gt;</code>, <code>&lt;em&gt;</code> - Matnni kursiv qilish
+          (<code>&lt;em&gt;</code> urg'uni bildiradi).
+        </li>
+        <li>
+          <code>&lt;u&gt;</code>, <code>&lt;ins&gt;</code> - Matnni tagiga
+          chizish (<code>&lt;ins&gt;</code> qo'shilgan matnni bildiradi).
+        </li>
+        <li>
+          <code>&lt;del&gt;</code>, <code>&lt;s&gt;</code> - Matnni o'chirilgan
+          qilib ko'rsatish.
+        </li>
+        <li>
+          <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code> - Matnni pastki
+          yoki yuqori indeksga qo'yish.
+        </li>
+        <li>
+          <code>&lt;mark&gt;</code> - Matnning muhim qismini belgilash
+          (markerlash).
+        </li>
+        <li>
+          <code>&lt;small&gt;</code> - Matnni kichikroq hajmda ko'rsatadi
+          (mualliflik huquqi kabi).
+        </li>
+        <li>
+          <code>&lt;blockquote&gt;</code>, <code>&lt;q&gt;</code> - Iqtiboslarni
+          belgilash.
+        </li>
+        <li><code>&lt;abbr&gt;</code> - Qisqartmalarni belgilash.</li>
+        <li><code>&lt;time&gt;</code> - Vaqt yoki sanani belgilash.</li>
+        <li>
+          <code>&lt;br&gt;</code> - Matn ichida yangi qatorga o'tish (line
+          break).
+        </li>
+        <li>
+          <code>&lt;hr&gt;</code> - Mavzularni ajratuvchi gorizontal chiziq.
+        </li>
+        <li>
+          <code>&lt;wbr&gt;</code> - So'z ichida qatorni sindirish mumkin
+          bo'lgan joyni belgilaydi.
+        </li>
+      </ul>
+
+      <h2>5. Kod va texnik matnlar</h2>
+      <ul>
+        <li>
+          <code>&lt;code&gt;</code>, <code>&lt;pre&gt;</code> - Dastur kodini
+          ko'rsatish.
+        </li>
+        <li>
+          <code>&lt;var&gt;</code> - Dasturlashdagi o'zgaruvchini belgilash
+          uchun.
+        </li>
+        <li>
+          <code>&lt;kbd&gt;</code> - Klaviatura kiritishini belgilash uchun.
+        </li>
+        <li><code>&lt;samp&gt;</code> - Dastur chiqishini belgilash uchun.</li>
+      </ul>
+
+      <h2>6. Havolalar va Media</h2>
+      <ul>
+        <li><code>&lt;a&gt;</code> - Giperhavola yaratadi.</li>
+        <li><code>&lt;img&gt;</code> - Rasm joylashtiradi.</li>
+        <li>
+          <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code> - Audio va
+          video kontentni joylashtirish.
+        </li>
+        <li>
+          <code>&lt;source&gt;</code> - Media elementlar
+          (<code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>) uchun bir
+          nechta manba belgilaydi.
+        </li>
+        <li>
+          <code>&lt;track&gt;</code> - Media elementlar uchun subtitrlar kabi
+          matnli treklarni belgilaydi.
+        </li>
+        <li>
+          <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code> - Rasm,
+          diagramma kabi kontentni izohi bilan birga guruhlash.
+        </li>
+        <li>
+          <code>&lt;picture&gt;</code> - Turli ekran o'lchamlari uchun
+          moslashuvchan rasmlarni ko'rsatish.
+        </li>
+        <li>
+          <code>&lt;iframe&gt;</code> - Boshqa HTML hujjatni sahifaga
+          joylashtirish.
+        </li>
+        <li>
+          <code>&lt;svg&gt;</code>, <code>&lt;canvas&gt;</code> - Vektorli va
+          rastrli grafikalar chizish uchun.
+        </li>
+        <li>
+          <code>&lt;embed&gt;</code>, <code>&lt;object&gt;</code>,
+          <code>&lt;param&gt;</code> - Tashqi kontent yoki plaginlarni
+          joylashtirish.
+        </li>
+        <li>
+          <code>&lt;map&gt;</code>, <code>&lt;area&gt;</code> - Rasm ustida
+          bosiladigan interaktiv hududlar yaratish.
+        </li>
+      </ul>
+
+      <h2>7. Ro'yxatlar</h2>
+      <ul>
+        <li><code>&lt;ul&gt;</code> - Markerlangan ro'yxat.</li>
+        <li><code>&lt;ol&gt;</code> - Tartiblangan (raqamlangan) ro'yxat.</li>
+        <li><code>&lt;li&gt;</code> - Ro'yxat elementi.</li>
+        <li>
+          <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>,
+          <code>&lt;dd&gt;</code> - Ta'riflar ro'yxati (atama va uning izohi).
+        </li>
+      </ul>
+
+      <h2>8. Jadvallar</h2>
+      <ul>
+        <li><code>&lt;table&gt;</code> - Jadval yaratadi.</li>
+        <li><code>&lt;caption&gt;</code> - Jadval uchun sarlavha.</li>
+        <li>
+          <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>,
+          <code>&lt;tfoot&gt;</code> - Jadval sarlavhasi, tanasi va quyi qismini
+          guruhlash.
+        </li>
+        <li><code>&lt;tr&gt;</code> - Jadval qatori.</li>
+        <li><code>&lt;td&gt;</code> - Jadval katakchasi.</li>
+        <li><code>&lt;th&gt;</code> - Jadval sarlavha katakchasi.</li>
+        <li>
+          <code>&lt;colgroup&gt;</code>, <code>&lt;col&gt;</code> - Jadval
+          ustunlarini guruhlash va ularga uslub berish.
+        </li>
+      </ul>
+
+      <h2>9. Formalar</h2>
+      <ul>
+        <li><code>&lt;form&gt;</code> - Ma'lumot kiritish uchun forma.</li>
+        <li>
+          <code>&lt;input&gt;</code> - Kiritish maydoni (matn, parol, checkbox
+          va hokazo).
+        </li>
+        <li>
+          <code>&lt;textarea&gt;</code> - Ko'p qatorli matn kiritish maydoni.
+        </li>
+        <li><code>&lt;button&gt;</code> - Bosiladigan tugma.</li>
+        <li>
+          <code>&lt;label&gt;</code> - Kiritish maydoni uchun yorliq (nom).
+        </li>
+        <li>
+          <code>&lt;select&gt;</code>, <code>&lt;option&gt;</code>,
+          <code>&lt;optgroup&gt;</code> - Ochiladigan ro'yxat yaratish.
+        </li>
+        <li>
+          <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code> - Forma
+          elementlarini guruhlash va sarlavha berish.
+        </li>
+        <li>
+          <code>&lt;datalist&gt;</code> - <code>&lt;input&gt;</code> uchun
+          oldindan belgilangan variantlar ro'yxati.
+        </li>
+        <li>
+          <code>&lt;output&gt;</code> - Hisoblash natijasini ko'rsatish uchun.
+        </li>
+      </ul>
+
+      <h2>10. Interaktiv elementlar</h2>
+      <ul>
+        <li>
+          <code>&lt;details&gt;</code>, <code>&lt;summary&gt;</code> -
+          Foydalanuvchi ochib-yopishi mumkin bo'lgan qo'shimcha ma'lumotlar.
+        </li>
+        <li>
+          <code>&lt;dialog&gt;</code> - Interaktiv dialog oynasi yaratish.
+        </li>
+        <li>
+          <code>&lt;meter&gt;</code> - Belgilangan diapazondagi o'lchovni
+          ko'rsatadi (diskdagi joy kabi).
+        </li>
+        <li>
+          <code>&lt;progress&gt;</code> - Vazifaning bajarilish jarayonini
+          ko'rsatadi.
+        </li>
+      </ul>
+    </main>
+
+    <footer class="container py-4">
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+      >
+        <p>
+          &copy; 2024 Bohodir Normuhamedovich. Barcha huquqlar himoyalangan.
+        </p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a
+              href="https://youtube.com/@progametricks?si=26NL5ycKfVpE7ypO"
+              target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening YouTube kanalim"
+            >
+              <i class="bi bi-youtube social-icon"></i>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a
+              href="https://t.me/Bohodirbek93"
+              target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening Telegram sahifam"
+            >
+              <i class="bi bi-telegram social-icon"></i>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a
+              href="https://www.instagram.com/babaev.b.n?igsh=MTczcjhjMXI0YjlzNg%3D%3D&utm_source=qr"
+              target="_blank"
+              class="text-body-secondary"
+              aria-label="Mening Instagram sahifam"
+            >
+              <i class="bi bi-instagram social-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Yuqoriga">
+      <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const listItems = document.querySelectorAll(".container li"); // Faqat li elementlari uchun
+      const noResultsDiv = document.getElementById("noResults");
+
+      searchInput.addEventListener("keyup", (event) => {
+        const searchTerm = event.target.value.toLowerCase();
+        let found = false;
+
+        listItems.forEach((item) => {
+          const itemText = item.textContent.toLowerCase();
+          if (itemText.includes(searchTerm)) {
+            item.style.display = "";
+            found = true;
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        // Agar hech narsa topilmasa, xabar ko'rsatish
+        if (found) {
+          noResultsDiv.style.display = "none";
+        } else {
+          noResultsDiv.style.display = "block";
+        }
+      });
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
